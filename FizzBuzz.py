@@ -1,14 +1,19 @@
-num = int(input("Enter number:"))
-num2 = int(input("Enter number:"))
+num = 3
+num2 = 5
+mes = ""
 
-for i in range(1,20):
-    if(i % num == 0 and i % num2 == 0):
-        print("FizzBuzz")
-    elif(i % num == 0):
-        print("Fizz")
+for i in range(101):
+    mes = ""
+
+    if(i % num == 0):
+        mes += "Fizz"
+
     elif(i % num2 == 0):
-        print("Buzz")
-    else:
-        print(i)
+        mes += "Buzz"
+
+    if not mes:
+        mes += str(i)
+
+    print(mes)
 
     
